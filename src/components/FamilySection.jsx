@@ -302,13 +302,6 @@ function FamilySection() {
         </div>
       </div>
 
-      {/* Note about placeholder data */}
-      <div className="mt-8 max-w-4xl mx-auto text-center">
-        <p className="text-sm text-gray-500 italic">
-          Note: Family details and some personal information use placeholder data. 
-          Replace with actual information as appropriate.
-        </p>
-      </div>
     </section>
   );
 }

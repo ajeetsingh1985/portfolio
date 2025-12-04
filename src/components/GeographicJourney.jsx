@@ -110,7 +110,7 @@ function GeographicJourney() {
         'Leadership role',
         'Current residence'
       ],
-      image: 'https://images.unsplash.com/photo-1571055107559-3e67626fa8be?w=400&h=300&fit=crop',
+      image: '/images/WestChester.jpg',
       townInfo: 'Famous for: Historic downtown, University presence, Near Philadelphia, Colonial heritage',
       coordinates: { top: '25%', left: '80%' }
     }
