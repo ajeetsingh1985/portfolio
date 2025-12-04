@@ -19,7 +19,7 @@ function GeographicJourney() {
         'Near Kumaon foothills',
         'Foundation of values'
       ],
-      image: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=400&h=300&fit=crop',
+      image: '/images/Rudrapur.jpg',
       townInfo: 'Known for: Automotive manufacturing hub, SIDCUL industrial estate, Gateway to Kumaon region',
       coordinates: { top: '35%', left: '18%' }
     },
@@ -34,7 +34,7 @@ function GeographicJourney() {
         'Early tech interests',
         'Cultural exposure'
       ],
-      image: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=300&fit=crop',
+      image: '/images/Delhi.jpg',
       townInfo: 'Famous for: India Gate, Red Fort, Qutub Minar, Political capital, Rich Mughal history',
       coordinates: { top: '30%', left: '25%' }
     },
@@ -49,7 +49,7 @@ function GeographicJourney() {
         'Hill station education',
         'Strong peer network'
       ],
-      image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=400&h=300&fit=crop',
+      image: '/images/Nainital.jpg',
       townInfo: 'Famous for: Naini Lake, Hill station beauty, Quality colleges, Colonial architecture',
       coordinates: { top: '30%', left: '35%' }
     },
@@ -64,7 +64,7 @@ function GeographicJourney() {
         'Technical expertise',
         'Started freelancing'
       ],
-      image: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=400&h=300&fit=crop',
+      image: '/images/Dehradun.jpg',
       townInfo: 'Famous for: Doon School, Forest Research Institute, Robber\'s Cave, Gateway to Mussoorie',
       coordinates: { top: '30%', left: '45%' }
     },
@@ -79,7 +79,7 @@ function GeographicJourney() {
         'Multi-city experience',
         'Technical growth'
       ],
-      image: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&h=300&fit=crop',
+      image: '/images/Chandigarh.jpg',
       townInfo: 'Cities: Delhi (Capital), Chandigarh (Planned by Le Corbusier), Kolkata (Cultural capital)',
       coordinates: { top: '30%', left: '55%' }
     },
@@ -110,7 +110,7 @@ function GeographicJourney() {
         'Leadership role',
         'Current residence'
       ],
-      image: 'https://images.unsplash.com/photo-1568584711271-9c8f8bc4b7b5?w=400&h=300&fit=crop',
+      image: 'https://images.unsplash.com/photo-1571055107559-3e67626fa8be?w=400&h=300&fit=crop',
       townInfo: 'Famous for: Historic downtown, University presence, Near Philadelphia, Colonial heritage',
       coordinates: { top: '25%', left: '80%' }
     }
