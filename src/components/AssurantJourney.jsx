@@ -182,52 +182,129 @@ function AssurantJourney() {
         </div>
       </div>
 
-      {/* Leadership Impact */}
-      <div className="mt-12 max-w-4xl mx-auto">
-        <div className="card bg-gradient-to-br from-primary-50 to-indigo-50">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">Leadership & Team Building</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="font-semibold text-primary-700 mb-2">Team Development</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-primary-600 mr-2">•</span>
-                  Recruited, built, and mentored high-performing teams of 15+ engineers
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-600 mr-2">•</span>
-                  Established comprehensive engineering standards and best practices
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-600 mr-2">•</span>
-                  Implemented Agile/Scrum methodologies with measurable improvements
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-600 mr-2">•</span>
-                  Fostered collaborative knowledge-sharing culture across teams
-                </li>
-              </ul>
+      {/* Enhanced Leadership Impact & Individual Contributions */}
+      <div className="mt-12 max-w-5xl mx-auto">
+        <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-primary-100">
+          {/* Gradient accent */}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 via-indigo-500 to-purple-500"></div>
+          
+          <div className="p-8">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-3 mb-3">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary-500 to-indigo-600 rounded-2xl flex items-center justify-center text-2xl shadow-lg">
+                  🎯
+                </div>
+                <h3 className="text-2xl font-black bg-gradient-to-r from-gray-900 to-primary-600 bg-clip-text text-transparent">
+                  Leadership Excellence & Technical Impact
+                </h3>
+              </div>
+              <p className="text-gray-600">Leading teams while driving hands-on technical innovation</p>
             </div>
-            <div>
-              <h4 className="font-semibold text-primary-700 mb-2">Technical Excellence</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-primary-600 mr-2">•</span>
-                  Pioneered modern development practices and CI/CD adoption
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-600 mr-2">•</span>
-                  Established rigorous architecture review and design processes
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-600 mr-2">•</span>
-                  Championed code quality through automated testing and peer reviews
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-600 mr-2">•</span>
-                  Drove continuous innovation and technical excellence initiatives
-                </li>
-              </ul>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              {/* Senior Engineering Leadership */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-2xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border-2 border-blue-200 group-hover:border-blue-400 transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-2xl shadow-md">
+                      👥
+                    </div>
+                    <h4 className="text-lg font-bold text-gray-900">Senior Engineering Leadership</h4>
+                  </div>
+                  <ul className="space-y-3 text-sm text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <span className="flex-shrink-0 w-5 h-5 bg-blue-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                      <span><strong>Lead engineering teams of 10+ developers</strong> across multiple projects, providing technical direction and mentorship</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="flex-shrink-0 w-5 h-5 bg-blue-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                      <span><strong>Recruited and onboarded senior engineers,</strong> fostering culture of excellence and continuous improvement</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="flex-shrink-0 w-5 h-5 bg-blue-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                      <span><strong>Drive sprint planning and Agile ceremonies,</strong> ensuring alignment with business objectives and technical roadmap</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="flex-shrink-0 w-5 h-5 bg-blue-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                      <span><strong>Established engineering standards and best practices</strong> adopted across organization-wide development teams</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="flex-shrink-0 w-5 h-5 bg-blue-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                      <span><strong>Conduct performance reviews and career development</strong> for team members, accelerating their technical growth</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Individual Contributor Excellence */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                <div className="relative bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border-2 border-purple-200 group-hover:border-purple-400 transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center text-2xl shadow-md">
+                      💻
+                    </div>
+                    <h4 className="text-lg font-bold text-gray-900">Individual Contributor Impact</h4>
+                  </div>
+                  <ul className="space-y-3 text-sm text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <span className="flex-shrink-0 w-5 h-5 bg-purple-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                      <span><strong>Hands-on architect and developer</strong> designing and implementing critical enterprise systems and microservices</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="flex-shrink-0 w-5 h-5 bg-purple-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                      <span><strong>Write production code daily,</strong> contributing 20-30% hands-on development while leading strategic initiatives</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="flex-shrink-0 w-5 h-5 bg-purple-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                      <span><strong>Pioneered Azure cloud migration and serverless architecture,</strong> establishing patterns for enterprise adoption</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="flex-shrink-0 w-5 h-5 bg-purple-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                      <span><strong>Conduct rigorous code reviews and pair programming,</strong> ensuring architectural consistency and knowledge transfer</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="flex-shrink-0 w-5 h-5 bg-purple-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                      <span><strong>Resolve complex production issues and performance bottlenecks,</strong> maintaining 99.9% system reliability</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Strategic Vision */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 rounded-2xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="relative bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 rounded-2xl p-6 border-2 border-orange-200 group-hover:border-orange-400 transition-all duration-300">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center text-2xl shadow-md">
+                    🚀
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900">Strategic Vision & Future Goals</h4>
+                </div>
+                <div className="prose prose-sm max-w-none">
+                  <p className="text-gray-700 leading-relaxed mb-3">
+                    <strong>Aspiring to elevate technical leadership on high-profile, enterprise-scale initiatives</strong> that drive organizational transformation. 
+                    Focused on expanding influence as a <strong>Staff/Principal Engineer or Engineering Manager</strong> leading cross-functional teams 
+                    of 15-20+ engineers on mission-critical systems.
+                  </p>
+                  <div className="grid md:grid-cols-3 gap-3 mt-4">
+                    <div className="bg-white p-3 rounded-lg border border-orange-200">
+                      <div className="font-bold text-orange-700 text-sm mb-1">🎯 Technical Strategy</div>
+                      <div className="text-xs text-gray-600">Define technology roadmap and architectural vision for enterprise platforms</div>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg border border-red-200">
+                      <div className="font-bold text-red-700 text-sm mb-1">👔 Executive Influence</div>
+                      <div className="text-xs text-gray-600">Partner with C-suite on technical decisions driving business outcomes</div>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg border border-pink-200">
+                      <div className="font-bold text-pink-700 text-sm mb-1">🌟 Team Scaling</div>
+                      <div className="text-xs text-gray-600">Build and mentor engineering organizations exceeding 20+ members</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

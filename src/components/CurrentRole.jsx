@@ -20,95 +20,92 @@ function CurrentRole() {
         Architecting the next generation of engineering excellence and innovation at Assurant
       </p>
 
-      {/* 2025 Priorities */}
-      <div className="max-w-5xl mx-auto mb-12 relative z-10">
-        <div className="bg-gradient-to-r from-primary-600 to-indigo-600 text-white p-8 rounded-xl shadow-xl">
-          <h3 className="text-3xl font-bold mb-2 text-center">2025 Strategic Roadmap</h3>
-          <p className="text-center text-primary-100 mb-8">Transformative objectives driving organizational excellence</p>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="text-xl font-semibold mb-4 text-primary-100 flex items-center gap-2">
-                <span>🎯</span>
-                <span>Technical Excellence</span>
-              </h4>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="mr-3 text-green-300">✓</span>
-                  <span>Deliver enterprise Status Service with 99.9% uptime SLA guarantee</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-green-300">✓</span>
-                  <span>Achieve 70% database performance gains through advanced optimization</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-green-300">✓</span>
-                  <span>Deploy AI-driven monitoring with predictive incident prevention</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-green-300">✓</span>
-                  <span>Optimize Azure infrastructure reducing operational costs by 40%</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-xl font-semibold mb-4 text-primary-100 flex items-center gap-2">
-                <span>👥</span>
-                <span>Team & Culture</span>
-              </h4>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="mr-3 text-green-300">✓</span>
-                  <span>Scale team from 8 to 20+ high-performing engineers</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-green-300">✓</span>
-                  <span>Establish Center of Excellence for database optimization</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-green-300">✓</span>
-                  <span>Launch internal mentorship program for junior engineers</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-green-300">✓</span>
-                  <span>Foster innovation culture with monthly hackathons</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Strategic Initiatives */}
+      {/* Strategic Initiatives - Full Width */}
       <div className="max-w-6xl mx-auto relative z-10">
-        <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">Strategic Initiatives</h3>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="card bg-gradient-to-br from-blue-50 to-indigo-50 border-t-4 border-blue-500 hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">🚀</div>
-            <h4 className="text-lg font-bold text-gray-800 mb-3">Modernization</h4>
-            <p className="text-gray-700 text-sm">
-              Driving cloud-native transformation with microservices architecture, 
-              containerization, and serverless technologies for scalable solutions.
-            </p>
+        <div className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 shadow-2xl overflow-hidden">
+          {/* Background pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+              backgroundSize: '30px 30px'
+            }}></div>
           </div>
-          
-          <div className="card bg-gradient-to-br from-green-50 to-emerald-50 border-t-4 border-green-500 hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">⚡</div>
-            <h4 className="text-lg font-bold text-gray-800 mb-3">Performance</h4>
-            <p className="text-gray-700 text-sm">
-              Implementing cutting-edge optimization techniques, caching strategies, 
-              and database tuning to deliver lightning-fast user experiences.
-            </p>
-          </div>
-          
-          <div className="card bg-gradient-to-br from-purple-50 to-pink-50 border-t-4 border-purple-500 hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">🎓</div>
-            <h4 className="text-lg font-bold text-gray-800 mb-3">Innovation</h4>
-            <p className="text-gray-700 text-sm">
-              Creating a culture of continuous learning, experimentation, and 
-              adoption of emerging technologies like AI/ML and advanced analytics.
-            </p>
+
+          <div className="relative">
+            <div className="text-center mb-12">
+              <p className="text-xs uppercase tracking-[0.4em] text-white/60 mb-2">2025 Execution Pillars</p>
+              <h3 className="text-4xl font-bold text-white mb-4">Strategic Initiatives</h3>
+              <p className="text-white/80 max-w-2xl mx-auto">
+                Interconnected pillars driving organizational excellence through innovation, performance, and reliability
+              </p>
+            </div>
+
+            {/* Central Impact Core */}
+            <div className="flex items-center justify-center mb-12">
+              <div className="relative">
+                <div className="w-40 h-40 rounded-full bg-white/10 backdrop-blur-md border-2 border-white/30 flex items-center justify-center shadow-2xl">
+                  <div className="text-center">
+                    <div className="text-5xl mb-2">🎯</div>
+                    <div className="text-sm text-white font-bold">Strategic</div>
+                    <div className="text-xs text-white/70">Impact</div>
+                  </div>
+                </div>
+                <div className="absolute inset-0 rounded-full border-2 border-white/20 animate-ping"></div>
+                <div className="absolute -inset-2 rounded-full border border-white/10 animate-pulse"></div>
+              </div>
+            </div>
+
+            {/* Initiative Cards Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { 
+                  icon: '🚀', 
+                  title: 'Modernization', 
+                  desc: 'Cloud-native microservices, serverless architecture & containerization',
+                  color: 'from-blue-400 to-cyan-500',
+                  metrics: ['Microservices', 'Serverless', 'Containers']
+                },
+                { 
+                  icon: '⚡', 
+                  title: 'Performance', 
+                  desc: 'Advanced caching, database optimization & lightning-fast experiences',
+                  color: 'from-green-400 to-emerald-500',
+                  metrics: ['+70% Speed', 'Edge Cache', 'DB Tuning']
+                },
+                { 
+                  icon: '🎓', 
+                  title: 'Innovation', 
+                  desc: 'AI/ML adoption, advanced analytics & continuous learning culture',
+                  color: 'from-yellow-400 to-orange-500',
+                  metrics: ['AI/ML', 'Analytics', 'Learning']
+                },
+                { 
+                  icon: '🛡️', 
+                  title: 'Reliability', 
+                  desc: '99.9% SLA guarantee, chaos engineering & automated incident response',
+                  color: 'from-purple-400 to-pink-500',
+                  metrics: ['99.9% SLA', 'Chaos Test', 'Auto-Recovery']
+                }
+              ].map((initiative, idx) => (
+                <div 
+                  key={idx}
+                  className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/20 hover:scale-105 hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+                >
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${initiative.color} flex items-center justify-center text-4xl mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}>
+                    {initiative.icon}
+                  </div>
+                  <h4 className="font-bold text-white text-xl mb-3">{initiative.title}</h4>
+                  <p className="text-sm text-white/80 mb-4 leading-relaxed">{initiative.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {initiative.metrics.map((metric, i) => (
+                      <span key={i} className="text-xs bg-white/20 text-white px-2 py-1 rounded-full">
+                        {metric}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

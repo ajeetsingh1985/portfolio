@@ -16,17 +16,6 @@ function WhatExcites() {
       ]
     },
     {
-      icon: '🎯',
-      title: 'Building High-Performing Teams',
-      description: 'Cultivating engineering excellence by developing talent and fostering collaborative, innovation-driven cultures',
-      examples: [
-        'Strategic mentoring and technical coaching',
-        'Building psychologically safe environments',
-        'Empowering autonomous decision-making',
-        'Recognizing and amplifying achievements'
-      ]
-    },
-    {
       icon: '🚀',
       title: 'Solving Complex Challenges',
       description: 'Tackling difficult technical problems that have significant business impact',
@@ -73,6 +62,13 @@ function WhatExcites() {
     }
   ];
 
+  const leadershipFocus = [
+    'Strategic mentoring and technical coaching',
+    'Building psychologically safe environments',
+    'Empowering autonomous decision-making',
+    'Recognizing and amplifying achievements'
+  ];
+
   return (
     <section id="what-excites" className="section-container bg-gradient-to-b from-white to-primary-50">
       <h2 className="section-title">What Drives Me</h2>
@@ -82,7 +78,7 @@ function WhatExcites() {
 
       {/* Main Passions */}
       <div className="max-w-6xl mx-auto mb-12">
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {passions.map((passion, index) => (
             <div key={index} className="card hover:shadow-xl transition-all duration-300">
               <div className="text-5xl mb-4">{passion.icon}</div>
@@ -113,7 +109,12 @@ function WhatExcites() {
             <div key={index} className="card text-center hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
               <div className="text-4xl mb-3">{motivation.icon}</div>
               <h4 className="text-lg font-bold text-gray-800 mb-2">{motivation.title}</h4>
-              <p className="text-sm text-gray-600">{motivation.description}</p>
+              <p className="text-sm text-gray-600 mb-2">{motivation.description}</p>
+              {motivation.focusItems && (
+                <p className="text-xs text-gray-500">
+                  Focus: {motivation.focusItems.join(' • ')}
+                </p>
+              )}
             </div>
           ))}
         </div>
@@ -123,13 +124,19 @@ function WhatExcites() {
       <div className="max-w-4xl mx-auto">
         <div className="card bg-gradient-to-r from-primary-600 to-indigo-600 text-white">
           <h3 className="text-2xl font-bold mb-4 text-center">My Vision</h3>
-          <p className="text-lg text-center leading-relaxed mb-6">
-            "To architect transformative software solutions that drive business value, cultivate 
-            cultures of innovation and technical excellence, and create lasting positive impact 
+          <p className="text-lg text-center leading-relaxed mb-4">
+            "To architect transformative software solutions that drive business value, cultivate
+            cultures of innovation and technical excellence, and create lasting positive impact
             on both technology ecosystems and the people who build them."
           </p>
-          
-          <div className="grid md:grid-cols-3 gap-6 mt-8">
+          <div className="flex flex-wrap justify-center gap-3 text-xs text-white/80 mb-6">
+            {leadershipFocus.map((item, index) => (
+              <span key={index} className="rounded-full border border-white/30 bg-white/10 px-3 py-1">
+                {item}
+              </span>
+            ))}
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-lg">
               <div className="text-3xl font-bold mb-2">Technology</div>
               <div className="text-sm text-primary-100">

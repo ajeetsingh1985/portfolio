@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';
+import FamilyHighlight from './components/FamilyHighlight';
 import GeographicJourney from './components/GeographicJourney';
 import EducationTimeline from './components/EducationTimeline';
 import CareerTimeline from './components/CareerTimeline';
@@ -21,6 +22,7 @@ function App() {
             <>
               <Hero />
               <About />
+              <FamilyHighlight />
               <GeographicJourney />
               <EducationTimeline />
               <CareerTimeline />

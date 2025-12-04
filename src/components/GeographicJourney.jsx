@@ -234,92 +234,197 @@ function GeographicJourney() {
         </p>
       </div>
 
-      {/* Interactive Map Visualization with Real Map */}
+      {/* Interactive Animated World Map */}
       <div className="max-w-6xl mx-auto mb-12">
-        <div className="card relative h-96 overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 group/map">
-          {/* World Map showing exact city locations */}
-          <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/8/83/Equirectangular_projection_SW.jpg"
-            alt="World Map"
-            className="absolute inset-0 w-full h-full object-cover opacity-40"
-          />
-          
-          {/* Decorative grid overlay */}
-          <div className="absolute inset-0 opacity-20 pointer-events-none">
-            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern id="worldgrid" width="60" height="60" patternUnits="userSpaceOnUse">
-                  <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#3B82F6" strokeWidth="0.5"/>
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#worldgrid)" />
-            </svg>
+        <div className="card relative h-[500px] overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 group/map">
+          {/* Animated stars background */}
+          <div className="absolute inset-0 overflow-hidden">
+            {[...Array(50)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-1 h-1 bg-white rounded-full animate-pulse"
+                style={{
+                  top: `${Math.random() * 100}%`,
+                  left: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 3}s`,
+                  opacity: Math.random() * 0.7 + 0.3
+                }}
+              ></div>
+            ))}
           </div>
-          
-          {/* Overlay for better marker visibility */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/30 pointer-events-none"></div>
 
-          {/* Expand Map Button */}
-          <button
-            onClick={() => {
-              const mapContainer = document.querySelector('.map-container');
-              if (mapContainer.requestFullscreen) {
-                mapContainer.requestFullscreen();
-              } else if (mapContainer.webkitRequestFullscreen) {
-                mapContainer.webkitRequestFullscreen();
-              } else if (mapContainer.msRequestFullscreen) {
-                mapContainer.msRequestFullscreen();
-              }
-            }}
-            className="absolute top-4 right-4 z-30 bg-white hover:bg-gray-100 text-gray-700 px-3 py-2 rounded-lg shadow-lg transition-all duration-300 flex items-center gap-2 text-sm font-medium opacity-0 group-hover/map:opacity-100"
-          >
-            <span>🔍</span>
-            <span>Expand Map</span>
-          </button>
+          {/* SVG World Map with Journey Path */}
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              {/* Gradient for the path */}
+              <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.8" />
+                <stop offset="50%" stopColor="#8B5CF6" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#EC4899" stopOpacity="0.8" />
+              </linearGradient>
+              
+              {/* Animated dash for path */}
+              <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#60A5FA">
+                  <animate attributeName="stop-color" values="#60A5FA;#A78BFA;#F472B6;#60A5FA" dur="3s" repeatCount="indefinite" />
+                </stop>
+                <stop offset="100%" stopColor="#A78BFA">
+                  <animate attributeName="stop-color" values="#A78BFA;#F472B6;#60A5FA;#A78BFA" dur="3s" repeatCount="indefinite" />
+                </stop>
+              </linearGradient>
 
-          {/* Location Markers with exact coordinates */}
-          {locations.map((location) => (
-            <button
-              key={location.id}
-              onClick={() => {
-                setSelectedLocation(selectedLocation?.id === location.id ? null : location);
-                // Scroll to details
-                setTimeout(() => {
-                  document.getElementById(`location-${location.id}`)?.scrollIntoView({ 
-                    behavior: 'smooth', 
-                    block: 'nearest' 
-                  });
-                }, 100);
-              }}
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 group"
-              style={{ 
-                top: location.coordinates.top, 
-                left: location.coordinates.left,
-                zIndex: 20
-              }}
-            >
-              <div className="relative">
-                {/* Pulsing effect */}
-                <div className="absolute inset-0 w-12 h-12 bg-primary-400 rounded-full animate-ping opacity-75"></div>
-                
-                {/* Main marker */}
-                <div className={`relative w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-125 transition-transform duration-300 border-4 ${selectedLocation?.id === location.id ? 'border-yellow-400' : 'border-white'}`}>
-                  <span className="text-white font-bold text-sm">{location.id}</span>
-                </div>
-                
-                {/* Location pointer pin */}
-                <div className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] ${selectedLocation?.id === location.id ? 'border-t-yellow-400' : 'border-t-white'}`}></div>
-                
-                {/* Hover tooltip */}
-                <div className="absolute top-14 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-xl">
-                  <div className="font-bold">{location.name}</div>
-                  <div className="text-xs text-gray-300">{location.years}</div>
-                  {/* Arrow pointing up */}
-                  <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gray-900 rotate-45"></div>
-                </div>
-              </div>
-            </button>
-          ))}
+              {/* Glow filter */}
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+
+            {/* Simplified continent outlines */}
+            <g opacity="0.15" stroke="#60A5FA" strokeWidth="1" fill="none">
+              {/* India outline (simplified) */}
+              <path d="M 280 200 Q 285 190, 295 185 Q 305 180, 315 185 Q 325 190, 328 200 Q 330 220, 325 235 Q 320 245, 310 250 Q 295 255, 285 250 Q 275 240, 275 225 Q 275 210, 280 200 Z" />
+              
+              {/* USA outline (simplified) */}
+              <path d="M 700 150 Q 750 145, 800 155 Q 850 165, 880 180 Q 900 195, 895 220 Q 885 240, 865 250 Q 840 255, 810 250 Q 780 245, 750 235 Q 720 220, 700 200 Q 685 180, 690 165 Q 695 155, 700 150 Z" />
+            </g>
+
+            {/* Animated journey path connecting all locations */}
+            <g>
+              {/* Path segments with animation */}
+              <path
+                d="M 180,175 Q 220,170 260,180 Q 280,185 310,195 Q 330,200 370,205 Q 400,208 450,210 Q 500,205 550,200 Q 600,190 650,185 Q 700,180 750,185 Q 780,188 800,190"
+                stroke="url(#pathGradient)"
+                strokeWidth="3"
+                fill="none"
+                strokeLinecap="round"
+                strokeDasharray="10 5"
+                opacity="0.6"
+                filter="url(#glow)"
+              >
+                <animate attributeName="stroke-dashoffset" from="0" to="30" dur="2s" repeatCount="indefinite" />
+              </path>
+              
+              {/* Glowing overlay path */}
+              <path
+                d="M 180,175 Q 220,170 260,180 Q 280,185 310,195 Q 330,200 370,205 Q 400,208 450,210 Q 500,205 550,200 Q 600,190 650,185 Q 700,180 750,185 Q 780,188 800,190"
+                stroke="url(#animatedGradient)"
+                strokeWidth="2"
+                fill="none"
+                strokeLinecap="round"
+                opacity="0.9"
+              >
+                <animate attributeName="stroke-dasharray" values="0 1000; 1000 0" dur="4s" repeatCount="indefinite" />
+                <animate attributeName="stroke-dashoffset" from="1000" to="0" dur="4s" repeatCount="indefinite" />
+              </path>
+            </g>
+
+            {/* Location markers with precise coordinates */}
+            {locations.map((location, idx) => {
+              const xPositions = [180, 260, 310, 370, 450, 650, 800];
+              const yPositions = [175, 180, 195, 205, 210, 185, 190];
+              return (
+                <g key={location.id}>
+                  {/* Pulsing circle */}
+                  <circle
+                    cx={xPositions[idx]}
+                    cy={yPositions[idx]}
+                    r="20"
+                    fill={selectedLocation?.id === location.id ? '#FCD34D' : '#3B82F6'}
+                    opacity="0.3"
+                  >
+                    <animate attributeName="r" values="20;30;20" dur="2s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.3;0.1;0.3" dur="2s" repeatCount="indefinite" />
+                  </circle>
+                  
+                  {/* Main location marker */}
+                  <circle
+                    cx={xPositions[idx]}
+                    cy={yPositions[idx]}
+                    r="12"
+                    fill={selectedLocation?.id === location.id ? '#FCD34D' : '#60A5FA'}
+                    stroke="white"
+                    strokeWidth="3"
+                    filter="url(#glow)"
+                    className="cursor-pointer hover:r-[16px] transition-all"
+                    onClick={() => {
+                      setSelectedLocation(selectedLocation?.id === location.id ? null : location);
+                      setTimeout(() => {
+                        document.getElementById(`location-${location.id}`)?.scrollIntoView({ 
+                          behavior: 'smooth', 
+                          block: 'nearest' 
+                        });
+                      }, 100);
+                    }}
+                  />
+                  
+                  {/* Location number */}
+                  <text
+                    x={xPositions[idx]}
+                    y={yPositions[idx] + 5}
+                    textAnchor="middle"
+                    fill="white"
+                    fontSize="12"
+                    fontWeight="bold"
+                    className="pointer-events-none"
+                  >
+                    {location.id}
+                  </text>
+                  
+                  {/* Location label */}
+                  <text
+                    x={xPositions[idx]}
+                    y={yPositions[idx] + 35}
+                    textAnchor="middle"
+                    fill="white"
+                    fontSize="10"
+                    fontWeight="600"
+                    opacity="0.9"
+                    className="pointer-events-none"
+                  >
+                    {location.name}
+                  </text>
+                </g>
+              );
+            })}
+
+            {/* Animated plane icon traveling along path */}
+            <g>
+              <text fontSize="24" fill="#FCD34D" filter="url(#glow)">
+                <animateMotion
+                  dur="12s"
+                  repeatCount="indefinite"
+                  path="M 180,175 Q 220,170 260,180 Q 280,185 310,195 Q 330,200 370,205 Q 400,208 450,210 Q 500,205 550,200 Q 600,190 650,185 Q 700,180 750,185 Q 780,188 800,190"
+                >
+                </animateMotion>
+                ✈️
+              </text>
+            </g>
+          </svg>
+
+          {/* Legend */}
+          <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-3 text-white text-xs">
+            <div className="font-bold mb-2">🗺️ Journey Map</div>
+            <div className="flex items-center gap-2 mb-1">
+              <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+              <span>India Journey (1984-2012)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 bg-pink-400 rounded-full"></div>
+              <span>USA Career (2013-Present)</span>
+            </div>
+          </div>
+
+          {/* Interaction hint */}
+          <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white text-xs opacity-0 group-hover/map:opacity-100 transition-opacity duration-300">
+            <div className="flex items-center gap-2">
+              <span>💡</span>
+              <span>Click markers to explore each location</span>
+            </div>
+          </div>
         </div>
       </div>
 

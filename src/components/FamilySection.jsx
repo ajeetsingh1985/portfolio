@@ -5,6 +5,48 @@ import ImageCarousel from './ImageCarousel';
  * Displays personal life, hobbies, fun facts, and family details with photo carousel and life timeline
  */
 function FamilySection() {
+  // Family members data
+  const familyMembers = {
+    parents: {
+      title: 'Parents',
+      description: 'My parents are the architects of my character and the foundation of everything I have become. Their unwavering support, countless sacrifices, and unconditional love have been the driving force behind every achievement in my life. They taught me that success is not just about reaching the top, but about lifting others along the way. Their wisdom, work ethic, and moral compass continue to guide me through every decision, both personal and professional. I am forever grateful for the values they instilled, the opportunities they created, and the love they showered upon me. Everything I am today, I owe to them.',
+      image: '/images/parents.JPG',
+      values: ['Hard Work', 'Integrity', 'Education', 'Compassion', 'Family', 'Resilience'],
+      icon: '👨‍👩'
+    },
+    sibling: {
+      title: 'Sibling',
+      name: 'Brother/Sister Name',
+      role: 'Brother/Sister',
+      description: 'Add description about your sibling - their personality, shared memories, your bond, and special moments together.',
+      image: '/images/sibling.jpg',
+      icon: '👦'
+    }
+  };
+
+  const familyValues = [
+    {
+      title: 'Education',
+      description: 'A strong emphasis on learning and continuous growth',
+      icon: '📚'
+    },
+    {
+      title: 'Hard Work',
+      description: 'Dedication and perseverance in all endeavors',
+      icon: '💪'
+    },
+    {
+      title: 'Integrity',
+      description: 'Honesty and strong moral principles',
+      icon: '⚖️'
+    },
+    {
+      title: 'Family Unity',
+      description: 'Supporting and caring for one another',
+      icon: '🤝'
+    }
+  ];
+
   // Family photos from the images folder
   const familyPhotos = [
     '/images/IMG_0039.jpg',
@@ -99,6 +141,55 @@ function FamilySection() {
       <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
         Beyond technology - the people and passions that make life meaningful
       </p>
+
+      {/* Family Roots - My Parents */}
+      <div className="max-w-4xl mx-auto mb-16">
+        <div className="text-center mb-10">
+          <h3 className="text-3xl font-bold text-gray-800 mb-3">👨‍👩 My Parents</h3>
+          <p className="text-gray-600">The guiding lights who shaped my character and values</p>
+        </div>
+        
+        {/* Parents Card - Single Centered Card */}
+        <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100">
+          {/* Image Container with contain to fit the full image */}
+          <div className="relative h-96 bg-gradient-to-br from-primary-100 to-indigo-100 overflow-hidden flex items-center justify-center p-4">
+            <img 
+              src={familyMembers.parents.image} 
+              alt={familyMembers.parents.title}
+              className="max-w-full max-h-full object-contain rounded-lg"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.parentElement.innerHTML = `<div class="flex items-center justify-center w-full h-full"><span class="text-9xl">${familyMembers.parents.icon}</span></div>`;
+              }}
+            />
+          </div>
+          
+          {/* Content */}
+          <div className="p-8">
+            <div className="mb-6">
+              <h4 className="text-3xl font-bold text-gray-800 mb-2">{familyMembers.parents.title}</h4>
+              <p className="text-lg text-primary-600 font-semibold">The foundation of who I am</p>
+            </div>
+            
+            <p className="text-gray-700 leading-relaxed text-base mb-6">{familyMembers.parents.description}</p>
+            
+            {/* Values */}
+            <div className="border-t border-gray-200 pt-6">
+              <h5 className="text-sm font-semibold text-gray-600 mb-4 uppercase tracking-wide">Core Values They Taught Me</h5>
+              <div className="flex flex-wrap gap-3">
+                {familyMembers.parents.values.map((value, idx) => (
+                  <span 
+                    key={idx}
+                    className="bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium border border-primary-200"
+                  >
+                    {value}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Family Photo Carousel */}
       <div className="max-w-5xl mx-auto mb-12">
@@ -221,82 +312,41 @@ function FamilySection() {
         </div>
       </div>
 
-      {/* Hobbies & Interests */}
-      <div className="max-w-6xl mx-auto mb-12">
-        <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">Hobbies & Interests</h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {hobbies.map((hobby, index) => (
-            <div key={index} className="card hover:shadow-xl transition-all duration-300">
-              <div className="text-4xl mb-3">{hobby.icon}</div>
-              <h4 className="text-lg font-bold text-gray-800 mb-2">{hobby.title}</h4>
-              <p className="text-sm text-gray-600 mb-3">{hobby.description}</p>
-              <div className="space-y-1">
-                {hobby.favorites.map((fav, idx) => (
-                  <div key={idx} className="text-xs text-primary-600 flex items-center">
-                    <span className="mr-1">•</span>
-                    <span>{fav}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Fun Facts */}
-      <div className="max-w-6xl mx-auto mb-12">
-        <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">Fun Facts About Me</h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {funFacts.map((item, index) => (
-            <div key={index} className="card bg-gradient-to-br from-yellow-50 to-orange-50 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-start">
-                <div className="text-3xl mr-3">{item.icon}</div>
-                <div className="flex-1">
-                  <h4 className="text-lg font-bold text-gray-800 mb-1">{item.fact}</h4>
-                  <p className="text-sm text-gray-600">{item.description}</p>
+      {/* Hobbies & Personal Values - Simplified */}
+      <div className="max-w-6xl mx-auto">
+        <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">Beyond Work</h3>
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Hobbies */}
+          <div className="card bg-gradient-to-br from-blue-50 to-indigo-50">
+            <h4 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+              <span className="text-3xl">🎯</span>
+              <span>Hobbies & Interests</span>
+            </h4>
+            <div className="grid grid-cols-2 gap-4">
+              {hobbies.map((hobby, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-4xl mb-2">{hobby.icon}</div>
+                  <h5 className="font-semibold text-gray-800 text-sm">{hobby.title}</h5>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
 
-      {/* Personal Values */}
-      <div className="max-w-4xl mx-auto mb-12">
-        <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">Core Personal Values</h3>
-        <div className="flex flex-wrap justify-center gap-4">
-          {values.map((value, index) => (
-            <span
-              key={index}
-              className="bg-gradient-to-r from-primary-600 to-indigo-600 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105"
-            >
-              {value}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Work-Life Balance */}
-      <div className="max-w-4xl mx-auto">
-        <div className="card bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">⚖️ Work-Life Balance Philosophy</h3>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            While I'm passionate about technology and leadership, I believe that true success 
-            comes from balance. Family time, personal hobbies, and self-care are not just 
-            important—they're essential for sustained professional excellence.
-          </p>
-          <div className="grid md:grid-cols-3 gap-4 mt-6">
-            <div className="bg-white p-4 rounded-lg text-center">
-              <div className="text-2xl font-bold text-green-600 mb-1">Professional</div>
-              <div className="text-sm text-gray-600">Excellence in leadership</div>
-            </div>
-            <div className="bg-white p-4 rounded-lg text-center">
-              <div className="text-2xl font-bold text-green-600 mb-1">Personal</div>
-              <div className="text-sm text-gray-600">Growth and learning</div>
-            </div>
-            <div className="bg-white p-4 rounded-lg text-center">
-              <div className="text-2xl font-bold text-green-600 mb-1">Family</div>
-              <div className="text-sm text-gray-600">Love and connection</div>
+          {/* Values */}
+          <div className="card bg-gradient-to-br from-green-50 to-emerald-50">
+            <h4 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+              <span className="text-3xl">⭐</span>
+              <span>Core Values</span>
+            </h4>
+            <div className="flex flex-wrap gap-3">
+              {values.map((value, index) => (
+                <span
+                  key={index}
+                  className="bg-gradient-to-r from-primary-600 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-all hover:scale-105"
+                >
+                  {value}
+                </span>
+              ))}
             </div>
           </div>
         </div>
