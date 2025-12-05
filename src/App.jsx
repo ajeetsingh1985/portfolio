@@ -5,9 +5,7 @@ import About from './components/About';
 import FamilyHighlight from './components/FamilyHighlight';
 import GeographicJourney from './components/GeographicJourney';
 import EducationTimeline from './components/EducationTimeline';
-import CareerTimeline from './components/CareerTimeline';
-import AssurantJourney from './components/AssurantJourney';
-import CurrentRole from './components/CurrentRole';
+import CareerEvolution from './components/CareerEvolution';
 import WhatExcites from './components/WhatExcites';
 import FamilySection from './components/FamilySection';
 import Footer from './components/Footer';
@@ -25,9 +23,7 @@ function App() {
               <FamilyHighlight />
               <GeographicJourney />
               <EducationTimeline />
-              <CareerTimeline />
-              <AssurantJourney />
-              <CurrentRole />
+              <CareerEvolution />
               <WhatExcites />
               <FamilySection />
             </>
@@ -35,7 +31,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/journey" element={<GeographicJourney />} />
           <Route path="/education" element={<EducationTimeline />} />
-          <Route path="/career" element={<CareerTimeline />} />
+          <Route path="/career" element={<CareerEvolution />} />
           <Route path="/family" element={<FamilySection />} />
         </Routes>
         <Footer />

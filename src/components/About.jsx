@@ -42,7 +42,7 @@ return (
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-indigo-400 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
                     <div className="relative aspect-square rounded-3xl bg-gradient-to-br from-primary-100 to-indigo-100 overflow-hidden shadow-2xl border-4 border-white transform group-hover:scale-105 group-hover:rotate-1 transition-all duration-500">
                         <img 
-                            src="\images\MySelf.JPG" 
+                            src="\images\MySelf1.JPG" 
                             alt="Ajeet Singh" 
                             className="w-full h-full object-cover"
                         />
