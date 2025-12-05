@@ -44,7 +44,7 @@ function Navigation() {
             </Link>
           </div>
 
-          {/* Desktop Navigation - Enhanced */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-2">
             {navLinks.map((link) => (
               <Link
@@ -61,7 +61,7 @@ function Navigation() {
             ))}
           </div>
 
-          {/* Mobile menu button - Enhanced */}
+          {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -95,15 +95,15 @@ function Navigation() {
         </div>
       </div>
 
-      {/* Mobile menu - Enhanced */}
+      {/* Mobile menu */}
       <div className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="px-4 pt-2 pb-4 space-y-2 bg-gradient-to-b from-white to-primary-50 border-t-2 border-primary-100">
           {navLinks.map((link, index) => (
             <Link
               key={link.name}
               to={link.path}
-              className="group flex items-center gap-3 text-gray-700 hover:text-primary-600 px-4 py-3 rounded-xl text-base font-medium bg-white hover:bg-gradient-to-r hover:from-primary-50 hover:to-indigo-50 transition-all duration-300 border border-gray-100 hover:border-primary-200 hover:shadow-md transform hover:scale-105"
               onClick={() => setIsOpen(false)}
+              className="group flex items-center gap-3 text-gray-700 hover:text-primary-600 px-4 py-3 rounded-xl text-base font-medium bg-white hover:bg-gradient-to-r hover:from-primary-50 hover:to-indigo-50 transition-all duration-300 border border-gray-100 hover:border-primary-200 hover:shadow-md transform hover:scale-105"
               style={{
                 animation: isOpen ? `slideIn 0.3s ease-out ${index * 0.05}s both` : 'none'
               }}

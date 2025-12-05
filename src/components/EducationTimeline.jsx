@@ -48,7 +48,7 @@ function EducationTimeline() {
       institution: 'Intermediate College',
       location: 'Delhi, India',
       year: '1998 - 2001',
-      duration: '3 Years',
+      duration: '4 Years',
       description: 'Focused on Science and Mathematics, building analytical and problem-solving skills.',
       achievements: [
         'Science and Mathematics focus',

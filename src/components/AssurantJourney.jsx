@@ -23,13 +23,13 @@ function AssurantJourney() {
       {
         name: 'Legacy System Modernization',
         period: '2014-2017',
-        description: 'Spearheaded comprehensive modernization initiatives including Warehouse Application optimization (query tuning for faster page rendering), CVision platform enhancements (new features and maintenance), and Buyer\'s Remorse implementation—a strategic initiative that established deep domain expertise and significantly improved operational efficiency.',
+        description: 'Spearheaded comprehensive modernization initiatives including Warehouse Application optimization (query tuning for faster page rendering), Asset Recovery, CVision platform enhancements (new features and maintenance), and Buyer\'s Remorse implementation—a strategic initiative that established deep domain expertise and significantly improved operational efficiency.',
         impact: [
-          'Reduced deployment time by 60% through streamlined processes',
+          'Reduced deployment time through streamlined processes',
           'Dramatically improved system scalability and performance',
           'Enhanced code maintainability and accelerated developer productivity'
         ],
-        technologies: ['ASP Classic', 'VB.Net', 'WCF', 'C#', 'SQL Server']
+        technologies: ['ASP Classic', 'VB.Net', 'C#', 'ASP.Net', 'WCF', 'SQL Server']
       },
       {
         name: 'Azure Cloud Transformation',
@@ -37,7 +37,7 @@ function AssurantJourney() {
         description: 'Helped team in end-to-end migration of mission-critical business applications to Microsoft Azure platform. Orchestrated seamless execution and ongoing support while maintaining zero downtime. Collaborated cross-functionally to proactively resolve technical challenges and implement enterprise-grade best practices for scalability, reliability, and security.',
         impact: [
           'Achieved reduction in infrastructure operational costs',
-          'Delivered 99.9% system reliability with enhanced disaster recovery',
+          'Delivered high system reliability with enhanced disaster recovery',
           'Architected event-driven microservices with asynchronous messaging'
         ],
         technologies: ['Azure App Services', 'Azure Functions', 'Azure Storage', 'Event Grid', 'Cosmos DB']

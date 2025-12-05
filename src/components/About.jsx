@@ -21,7 +21,7 @@ return (
         
         <div className="text-center mb-16 relative z-10">
             <div className="inline-block mb-4">
-              <span className="bg-gradient-to-r from-primary-50 to-indigo-50 text-primary-700 font-semibold text-sm uppercase tracking-wide px-6 py-3 rounded-full border-2 border-primary-200 shadow-md">
+              <span className="bg-gradient-to-r from-primary-50 to-indigo-50 text-primary-700 font-semibold text-sm uppercase tracking-wide px-6 py-3 rounded-full border-2 border-primary-200 shadow-md backdrop-blur-sm">
                 Who i am?
               </span>
             </div>
@@ -39,7 +39,7 @@ return (
             <div className="grid md:grid-cols-2 gap-12 mb-16">
                 {/* Enhanced Profile Image */}
                 <div className="relative group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-indigo-400 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-indigo-400 rounded-3xl blur-2xl opacity-0 group-hover:opacity-3050 transition-all duration-500"></div>
                     <div className="relative aspect-square rounded-3xl bg-gradient-to-br from-primary-100 to-indigo-100 overflow-hidden shadow-2xl border-4 border-white transform group-hover:scale-105 group-hover:rotate-1 transition-all duration-500">
                         <img 
                             src="\images\MySelf1.JPG" 

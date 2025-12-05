@@ -48,7 +48,7 @@ function CareerEvolution() {
       year: '2014 - Present',
       title: 'Senior Technical Leadership',
       company: 'Assurant Inc.',
-      role: 'Senior Software Engineer → Technical Lead → Senior Technical Lead → Principal Software Engineer',
+      role: 'Senior Software Engineer → Technical Lead → Principal Software Engineer',
       description: 'Spearheaded massive technical modernization, Azure migrations, and real-time service architecture while mentoring high-performing engineering teams.',
       technologies: [
         'C#',
@@ -64,10 +64,10 @@ function CareerEvolution() {
         'Application Insights'
       ],
       achievements: [
-        'Modernized legacy systems (+40% performance improvement)',
-        'Delivered 99.9% reliability during Azure cloud transformation',
+        'Enhancing the performance of modernized legacy systems',
+        'Delivered reliability during Azure cloud transformation',
         'Implemented CI/CD automation and championed DevOps culture',
-        'Mentored high-performing .NET teams with 30% productivity boost',
+        'Mentored high-performing .NET teams to enhance productivity',
         'Established enterprise best practices around cloud-native patterns'
       ],
       isAssurant: true
@@ -94,9 +94,9 @@ function CareerEvolution() {
         period: '2014-2017',
         description: 'Spearheaded comprehensive modernization initiatives including Warehouse Application optimization, CVision platform enhancements, and Buyer\'s Remorse implementation.',
         impact: [
-          'Reduced deployment time by 60%',
+          'Reduced deployment time through streamlined processes',
           'Improved system scalability and performance',
-          'Enhanced code maintainability'
+          'Enhanced code maintainability and accelerated developer productivity'
         ],
         technologies: ['ASP Classic', 'VB.Net', 'WCF', 'C#', 'SQL Server']
       },
@@ -106,10 +106,10 @@ function CareerEvolution() {
         description: 'End-to-end migration of mission-critical business applications to Microsoft Azure platform with zero downtime.',
         impact: [
           'Significant reduction in infrastructure costs',
-          '99.9% system reliability achieved',
+          'Delivered high system reliability with enhanced disaster recovery capabilities',
           'Event-driven microservices architecture'
         ],
-        technologies: ['Azure App Services', 'Azure Functions', 'Event Grid', 'Cosmos DB']
+        technologies: ['Azure App Services', 'Azure Functions', 'Event Grid', 'Cosmos DB', 'Azure Storage', 'Application Insights']
       },
       {
         name: 'Enterprise Status Service Platform',
@@ -117,10 +117,10 @@ function CareerEvolution() {
         description: 'Next-generation Status Service platform leveraging serverless architecture with real-time monitoring and intelligent alerting.',
         impact: [
           'Real-time integration with 10+ external systems',
-          '40% faster incident detection and response',
-          '50% reduction in operational overhead'
+          'Improved logging for faster incident detection and response',
+          'Build configurable systems for dynamic business needs'
         ],
-        technologies: ['C#', '.NET Core', 'Azure Functions', 'Cosmos DB', 'Application Insights']
+        technologies: ['C#', '.NET Core', 'Azure Functions', 'Cosmos DB', 'Azure Storage', 'Application Insights', 'Azure API Management', 'EDI Building and Transformation']
       }
     ]
   };
@@ -139,9 +139,9 @@ function CareerEvolution() {
       <div className="absolute bottom-20 left-10 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
 
       <div className="relative z-10">
-        {/* Hero Banner */}
-        <div className="max-w-6xl mx-auto mb-16">
-          <div className="relative bg-gradient-to-br from-primary-600 via-indigo-600 to-purple-600 rounded-3xl shadow-2xl overflow-hidden p-8 md:p-12">
+        {/* Hero Banner - Compact */}
+        <div className="max-w-6xl mx-auto mb-12">
+          <div className="relative bg-gradient-to-br from-primary-600 via-indigo-600 to-purple-600 rounded-2xl shadow-xl overflow-hidden p-6 md:p-8">
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0" style={{
                 backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
@@ -150,32 +150,32 @@ function CareerEvolution() {
             </div>
             
             <div className="relative">
-              <div className="text-center mb-8">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">Career Evolution</h2>
-                <p className="text-primary-100 text-lg">20 years of technical excellence • C/C++ to Cloud-Native Azure</p>
+              <div className="text-center mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Career Evolution</h2>
+                <p className="text-primary-100 text-sm md:text-base">20 years of technical excellence • C/C++ to Cloud-Native Azure</p>
               </div>
 
-              <div className="grid grid-cols-3 gap-4 md:gap-8 mb-8">
+              <div className="grid grid-cols-3 gap-3 md:gap-6 mb-6">
                 {[
                   { value: '20+', label: 'Years', icon: '🚀', color: 'from-yellow-400 to-orange-500' },
                   { value: '50+', label: 'Projects', icon: '💡', color: 'from-green-400 to-emerald-500' },
                   { value: '15+', label: 'Teams', icon: '👥', color: 'from-blue-400 to-cyan-500' }
                 ].map((stat, idx) => (
                   <div key={idx} className="text-center group">
-                    <div className="text-4xl md:text-5xl mb-2 group-hover:scale-125 transition-transform duration-300">
+                    <div className="text-3xl md:text-4xl mb-1 group-hover:scale-110 transition-transform duration-300">
                       {stat.icon}
                     </div>
-                    <div className={`text-3xl md:text-4xl font-bold text-white mb-1 group-hover:scale-110 transition-transform`}>
+                    <div className={`text-2xl md:text-3xl font-bold text-white mb-1 group-hover:scale-105 transition-transform`}>
                       {stat.value}
                     </div>
-                    <div className="text-sm md:text-base text-primary-100 font-medium">{stat.label}</div>
+                    <div className="text-xs md:text-sm text-primary-100 font-medium">{stat.label}</div>
                   </div>
                 ))}
               </div>
 
               {/* Career Arc Timeline */}
-              <div className="relative h-24 flex items-end justify-between px-4">
-                <div className="absolute inset-x-0 bottom-8 h-0.5 bg-white/20"></div>
+              <div className="relative h-16 flex items-end justify-between px-4">
+                <div className="absolute inset-x-0 bottom-6 h-0.5 bg-white/20"></div>
                 {milestones.map((milestone) => (
                   <button
                     key={milestone.year}
@@ -231,9 +231,12 @@ function CareerEvolution() {
                       </div>
                       <button
                         onClick={() => setSelectedMilestone(selectedMilestone?.year === milestone.year ? null : milestone)}
-                        className="flex-shrink-0 px-4 py-2 bg-primary-50 hover:bg-primary-100 text-primary-700 rounded-lg font-semibold text-sm transition-colors"
+                        className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-primary-500 to-indigo-600 hover:from-primary-600 hover:to-indigo-700 text-white rounded-xl font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg hover:scale-110 group"
+                        title={selectedMilestone?.year === milestone.year ? 'Collapse' : 'Expand Details'}
                       >
-                        {selectedMilestone?.year === milestone.year ? 'Collapse' : 'Expand Details'}
+                        <span className="transform transition-transform duration-300 group-hover:scale-125">
+                          {selectedMilestone?.year === milestone.year ? '↑' : '↓'}
+                        </span>
                       </button>
                     </div>
 
@@ -271,10 +274,14 @@ function CareerEvolution() {
                         {milestone.isAssurant && (
                           <button
                             onClick={() => setExpandedSection(expandedSection === 'assurant' ? null : 'assurant')}
-                            className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+                            className="group w-full mt-4 px-6 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-xl font-semibold hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 relative overflow-hidden"
                           >
-                            <span>{expandedSection === 'assurant' ? '↑' : '↓'}</span>
-                            <span>{expandedSection === 'assurant' ? 'Hide' : 'Explore'} Assurant Journey ({assurantJourney.totalYears}+ Years)</span>
+                            <div className="absolute inset-0 bg-white/10 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                            <span className="text-2xl transform transition-transform duration-300 group-hover:rotate-180 relative z-10">
+                              {expandedSection === 'assurant' ? '🔼' : '🔽'}
+                            </span>
+                            <span className="relative z-10">{expandedSection === 'assurant' ? 'Hide' : 'Explore'} Assurant Journey ({assurantJourney.totalYears}+ Years)</span>
+                            <span className="text-xl relative z-10">🚀</span>
                           </button>
                         )}
                       </div>
@@ -352,6 +359,84 @@ function CareerEvolution() {
                         ))}
                       </div>
                     </div>
+
+                    {/* Leadership Excellence & Individual Contributions */}
+                    <div className="mt-12">
+                      <h4 className="text-xl font-bold text-gray-800 mb-4 text-center">Leadership Excellence & Technical Impact</h4>
+                      <p className="text-center text-gray-600 mb-6 text-sm">Leading teams while driving hands-on technical innovation</p>
+
+                      <div className="grid md:grid-cols-2 gap-6 items-stretch">
+                        {/* Senior Engineering Leadership */}
+                        <div className="group relative">
+                          <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-2xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                          <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border-2 border-blue-200 group-hover:border-blue-400 transition-all duration-300">
+                            <div className="flex items-center gap-3 mb-4">
+                              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-2xl shadow-md">
+                                👥
+                              </div>
+                              <h5 className="text-lg font-bold text-gray-900">Senior Engineering Leadership</h5>
+                            </div>
+                            <ul className="space-y-3 text-sm text-gray-700">
+                              <li className="flex items-start gap-2">
+                                <span className="flex-shrink-0 w-5 h-5 bg-blue-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                                <span><strong>Lead engineering teams of 10+ developers</strong> across multiple projects</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <span className="flex-shrink-0 w-5 h-5 bg-blue-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                                <span><strong>Assisted with onboarding senior engineers,</strong> fostering culture of excellence</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <span className="flex-shrink-0 w-5 h-5 bg-blue-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                                <span><strong>Drive sprint planning and Agile ceremonies</strong> aligned with business objectives</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <span className="flex-shrink-0 w-5 h-5 bg-blue-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                                <span><strong>Established engineering standards</strong> adopted organization-wide</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <span className="flex-shrink-0 w-5 h-5 bg-blue-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                                <span><strong>Conduct performance reviews and career development</strong> for team members</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        {/* Individual Contributor Excellence */}
+                        <div className="group relative">
+                          <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                          <div className="relative bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border-2 border-purple-200 group-hover:border-purple-400 transition-all duration-300">
+                            <div className="flex items-center gap-3 mb-4">
+                              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center text-2xl shadow-md">
+                                💻
+                              </div>
+                              <h5 className="text-lg font-bold text-gray-900">Individual Contributor Impact</h5>
+                            </div>
+                            <ul className="space-y-3 text-sm text-gray-700">
+                              <li className="flex items-start gap-2">
+                                <span className="flex-shrink-0 w-5 h-5 bg-purple-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                                <span><strong>Hands-on architect and developer</strong> designing critical enterprise systems</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <span className="flex-shrink-0 w-5 h-5 bg-purple-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                                <span><strong>Write production code daily,</strong> contributing in hands-on development</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <span className="flex-shrink-0 w-5 h-5 bg-purple-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                                <span><strong>Pioneered Azure cloud migration</strong> and serverless architecture patterns</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <span className="flex-shrink-0 w-5 h-5 bg-purple-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                                <span><strong>Conduct rigorous code reviews</strong> ensuring architectural consistency</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <span className="flex-shrink-0 w-5 h-5 bg-purple-500 rounded-md flex items-center justify-center text-white text-xs mt-0.5">✓</span>
+                                <span><strong>Resolve complex production issues,</strong> maintaining system reliability</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
@@ -359,9 +444,9 @@ function CareerEvolution() {
           </div>
         </div>
 
-        {/* Strategic Initiatives Section */}
+        {/* Strategic Initiatives Section - Compact */}
         <div className="max-w-6xl mx-auto">
-          <div className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 shadow-2xl overflow-hidden">
+          <div className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-6 md:p-8 shadow-xl overflow-hidden">
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0" style={{
                 backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
@@ -370,22 +455,22 @@ function CareerEvolution() {
             </div>
 
             <div className="relative">
-              <div className="text-center mb-12">
-                <p className="text-xs uppercase tracking-[0.4em] text-white/60 mb-2">2025 Execution Pillars</p>
-                <h3 className="text-4xl font-bold text-white mb-4">Strategic Initiatives</h3>
-                <p className="text-white/80 max-w-2xl mx-auto">
-                  Interconnected pillars driving organizational excellence through innovation, performance, and reliability
+              <div className="text-center mb-6">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-white/60 mb-1">2025 Execution Pillars</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">Strategic Initiatives</h3>
+                <p className="text-white/80 max-w-2xl mx-auto text-sm">
+                  Interconnected pillars driving organizational excellence
                 </p>
               </div>
 
-              {/* Central Impact Core */}
-              <div className="flex items-center justify-center mb-12">
+              {/* Central Impact Core - Smaller */}
+              <div className="flex items-center justify-center mb-6">
                 <div className="relative">
-                  <div className="w-40 h-40 rounded-full bg-white/10 backdrop-blur-md border-2 border-white/30 flex items-center justify-center shadow-2xl">
+                  <div className="w-24 h-24 rounded-full bg-white/10 backdrop-blur-md border-2 border-white/30 flex items-center justify-center shadow-xl">
                     <div className="text-center">
-                      <div className="text-5xl mb-2">🎯</div>
-                      <div className="text-sm text-white font-bold">Strategic</div>
-                      <div className="text-xs text-white/70">Impact</div>
+                      <div className="text-3xl mb-1">🎯</div>
+                      <div className="text-[10px] text-white font-bold">Strategic</div>
+                      <div className="text-[9px] text-white/70">Impact</div>
                     </div>
                   </div>
                   <div className="absolute inset-0 rounded-full border-2 border-white/20 animate-ping"></div>
@@ -393,8 +478,8 @@ function CareerEvolution() {
                 </div>
               </div>
 
-              {/* Initiative Cards Grid */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Initiative Cards Grid - Compact */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {[
                   { 
                     icon: '🚀', 
@@ -423,16 +508,16 @@ function CareerEvolution() {
                 ].map((initiative, idx) => (
                   <div 
                     key={idx}
-                    className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/20 hover:scale-105 hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+                    className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 hover:bg-white/20 hover:scale-105 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                   >
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-white/20 to-white/10 flex items-center justify-center text-4xl mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}>
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br from-white/20 to-white/10 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}>
                       {initiative.icon}
                     </div>
-                    <h4 className="font-bold text-white text-xl mb-3">{initiative.title}</h4>
-                    <p className="text-sm text-white/80 mb-4 leading-relaxed">{initiative.desc}</p>
-                    <div className="flex flex-wrap gap-2">
+                    <h4 className="font-bold text-white text-base mb-2">{initiative.title}</h4>
+                    <p className="text-xs text-white/80 mb-3 leading-relaxed">{initiative.desc}</p>
+                    <div className="flex flex-wrap gap-1">
                       {initiative.metrics.map((metric, i) => (
-                        <span key={i} className="text-xs bg-white/20 text-white px-2 py-1 rounded-full">
+                        <span key={i} className="text-[10px] bg-white/20 text-white px-2 py-0.5 rounded-full">
                           {metric}
                         </span>
                       ))}

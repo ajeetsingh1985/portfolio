@@ -47,7 +47,7 @@ function Hero() {
           <div className="text-center mb-12">
             {/* Animated Badge */}
             <div className={`inline-block mb-6 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'}`}>
-              <span className="relative inline-flex items-center gap-2 bg-gradient-to-r from-primary-50 to-indigo-50 text-primary-700 font-semibold text-sm uppercase tracking-wide px-6 py-3 rounded-full border-2 border-primary-200 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <span className="relative inline-flex items-center gap-2 bg-gradient-to-r from-primary-50 to-indigo-50 text-primary-700 font-semibold text-sm uppercase tracking-wide px-6 py-3 rounded-full border-2 border-primary-200 shadow-lg hover:shadow-xl transition-all duration-300 group backdrop-blur-sm">
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-primary-500"></span>
@@ -78,17 +78,17 @@ function Hero() {
             
             {/* Animated Description with Icons */}
             <p className={`text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8 transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'}`}>
-              <span className="inline-flex items-center gap-2 hover:text-primary-600 transition-colors">
+              <span className="inline-flex items-center gap-2 hover:text-primary-600400 transition-colors">
                 <span className="text-2xl">🏗️</span>
                 Architecting enterprise-scale solutions
               </span>
-              <span className="mx-2">•</span>
-              <span className="inline-flex items-center gap-2 hover:text-primary-600 transition-colors">
+              <span className="mx-2 text-gray-400">•</span>
+              <span className="inline-flex items-center gap-2 hover:text-primary-600400 transition-colors">
                 <span className="text-2xl">☁️</span>
                 Driving cloud transformation
               </span>
-              <span className="mx-2">•</span>
-              <span className="inline-flex items-center gap-2 hover:text-primary-600 transition-colors">
+              <span className="mx-2 text-gray-400">•</span>
+              <span className="inline-flex items-center gap-2 hover:text-primary-600400 transition-colors">
                 <span className="text-2xl">👥</span>
                 Building exceptional teams
               </span>
@@ -117,7 +117,7 @@ function Hero() {
             </a>
             <a
               href="#career"
-              className="group relative bg-white text-primary-600 px-8 py-4 rounded-xl font-semibold border-2 border-primary-600 hover:bg-primary-50 transition-all duration-300 transform hover:scale-105 overflow-hidden"
+              className="group relative bg-white text-primary-600 px-8 py-4 rounded-xl font-semibold border-2 border-primary-600 hover:bg-primary-50700 transition-all duration-300 transform hover:scale-105 overflow-hidden"
             >
               <span className="relative z-10 flex items-center gap-2">
                 View Career
@@ -135,11 +135,11 @@ function Hero() {
             ].map((stat, index) => (
               <div key={index} className="group relative">
                 {/* Glow effect */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} rounded-2xl blur-xl opacity-0 group-hover:opacity-3050 transition-opacity duration-500`}></div>
                 
                 <div className="relative text-center p-6 bg-white rounded-2xl shadow-lg border-2 border-gray-100 hover:border-transparent hover:shadow-2xl transition-all duration-500 transform group-hover:scale-110 group-hover:-translate-y-2 cursor-pointer overflow-hidden">
                   {/* Animated background */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-1020 transition-opacity duration-500`}></div>
                   
                   {/* Icon */}
                   <div className="text-4xl mb-3 transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
